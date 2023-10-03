@@ -1,0 +1,83 @@
+.card_item {
+  position: relative; 
+}
+
+.card {    
+    padding: 10px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;        
+  }
+  
+  .card img {
+    border-radius: 50%;   
+    height: 260px;
+    width: 260px;
+    object-fit: contain;
+  }
+  
+  .price_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    /* gap: 50px; */
+    margin: 0 20px;
+   
+  }
+
+  .price_info p:nth-child(1) {
+    text-align: center;
+    margin: 10px 10px;      
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+    
+  }
+
+  .discounted-price {
+    text-decoration: line-through; /* Перечеркивание текста */
+    color: #999; /* Цвет для перечеркнутой цены (по вашему выбору) */
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 40px;  
+    
+  }
+
+  .price_info p:nth-child(2) {   
+   
+    font-weight: 600;
+    font-size: 24px;
+    color: red;
+  }
+
+ 
+
+  .card_item p:nth-child(3) {
+    text-align: center; 
+    font-size: 16px;
+    font-weight: 500; 
+    margin: 0 15px; 
+    }
+
+
+
+  .add_btn {
+    visibility: hidden;
+    cursor: pointer;
+    background-color: rgb(198, 219, 198);
+    color: rgb(1, 107, 1);
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    font-weight: 600;
+  }
+  
+  .card_item:hover .add_btn {
+    visibility: visible;
+  }
+
+ 
