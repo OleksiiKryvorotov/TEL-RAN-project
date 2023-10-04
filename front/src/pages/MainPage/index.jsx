@@ -15,14 +15,6 @@ const { register, handleSubmit, reset, formState: { errors } } = useForm({
     mode: 'onChange'
 });
 
-const dispatch = useDispatch()
-
-useEffect(() => { dispatch(getAllProducts) }, [dispatch])
-
-const products = useSelector(state => state.allProducts)
-
-const first_four_products = products.filter(el => el.discont_price !== null).slice(0,3) 
-
 const phoneNumberRegister = register('phoneNumber', {
   required: "*This field is required",
   pattern: {
@@ -36,8 +28,23 @@ const phoneNumberRegister = register('phoneNumber', {
 const submit = new_product_obj => {
   addNewProductSale(new_product_obj);
   reset()
-
 }  
+
+const dispatch = useDispatch()
+
+useEffect(() => { dispatch(getAllProducts) }, [dispatch])
+
+
+// RANDOM! -------------------------------
+
+const products = useSelector(state => state.allProducts)
+const get_random_products = () => {
+  const first_three_products = [...products].sort(() => Math.random() - 0.5);
+  return first_three_products.slice(0, 3)
+} 
+
+const random_products = get_random_products();
+//-------------------------------------------------
 
   return (
     <div className={s.wrapper}>  
@@ -59,7 +66,7 @@ const submit = new_product_obj => {
 
       <div className={s.catalog_container}>
         <div className={s.btn_container}>
-          <h2>Catalog</h2>
+          <h1>Catalog</h1>
           <Link to='/categories' >
             <div className={s.btn_cat}>All categories</div>
           </Link>
@@ -74,7 +81,7 @@ const submit = new_product_obj => {
         <div className={s.discount_descr}>
           <h1>5% off</h1>
           <h2>on the first order</h2>
-          <form  className={s.phone_num}nSubmit={handleSubmit(submit)}>
+          <form  className={s.phone_num} onSubmit={handleSubmit(submit)}>
               <input type="text"
                     placeholder=' +49' name='phonenumber'
                     {...phoneNumberRegister}
@@ -88,11 +95,11 @@ const submit = new_product_obj => {
 
 
 
-      <div className={s.gen_sale_container}>
-        <h3>Sale</h3>
+      <div className={s._sale_container}>
+        <h1>Sale</h1>
         <div>
 
-          <ProductsContainer products={first_four_products} productsStyle={true}/>         
+          <ProductsContainer products={random_products} category_show={false}/>         
 
         </div>
       </div>

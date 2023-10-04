@@ -4,10 +4,17 @@ import CartItem from '../CartItem'
 import s from './style.module.css'
 import { clearCartAction } from '../../store/reducers/cartReducer'
 import { sendOrder } from '../../requests/products_req'
+import { useEffect } from 'react'
 
 export default function Cart() {
 
-    const cart_state = useSelector(state => state.cart)
+   //localStorage!!!! ------------------------------------------
+   const cart_state = useSelector(state => state.cart);
+
+   useEffect(() => {
+     localStorage.setItem('cart', JSON.stringify(cart_state))
+   }, [cart_state]);
+   //----------------------------------------------------
 
     const dispatch = useDispatch()
     
