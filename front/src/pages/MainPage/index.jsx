@@ -37,7 +37,8 @@ useEffect(() => { dispatch(getAllProducts) }, [dispatch])
 
 // RANDOM! -------------------------------
 
-const products = useSelector(state => state.allProducts)
+const all_products = useSelector(state => state.allProducts)
+const products = all_products.filter(el => el.discont_price)
 const get_random_products = () => {
   const first_three_products = [...products].sort(() => Math.random() - 0.5);
   return first_three_products.slice(0, 3)
