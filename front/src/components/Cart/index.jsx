@@ -32,11 +32,6 @@ export default function Cart() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      
-      // Вы можете здесь выполнить необходимые действия с номером телефона,
-      // например, отправить его на сервер для обработки.
-      // alert(`Заказ размещен с номером телефона: ${phoneNumber}`);
-
       sendOrder()
       e.target.reset()
   };
@@ -69,9 +64,7 @@ export default function Cart() {
           </div>
         </form>                
           )}
-
         {/* <p>{itemCount}</p> */}
-
         </div>
       </div>
       

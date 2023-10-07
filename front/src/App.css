@@ -5,12 +5,7 @@
   font-family: 'Montserrat', sans-serif; 
 }
 
-
-
-#root {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+#root {    
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -19,4 +14,8 @@ a {
   text-decoration: none;
   color: black;
 } 
+
+/* @media (max-width: 768px) {
+  
+} */
  

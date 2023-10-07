@@ -15,7 +15,6 @@
     margin-left: 10px;
 }
 
-
 .catalog {
     background-color: #339933;
     color: white;    
@@ -24,8 +23,7 @@
     padding: 14px ;
     width: 155px;   
     height: 49px; 
-    margin-right: 500px;
-          
+    margin-right: 500px;          
 }
 
 .nav_block {
@@ -49,7 +47,6 @@
      padding: 4px;
      width: 30px;
      height: 30px;
-     margin-bottom: 10px;
-   
+     margin-bottom: 10px;   
 }
 

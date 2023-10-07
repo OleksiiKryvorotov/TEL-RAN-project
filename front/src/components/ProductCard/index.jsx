@@ -28,34 +28,22 @@ export default function ProductCard({ id, title, image, price, discont_price, ca
             <p>{price.toFixed(2)}$</p>
             )}
             <p>{ countDiscont}%</p>
-        </div>          
-          
+        </div>             
 
-        <p>{ title }</p>  
-          {/* <p>{ price }$</p>
-          <p>Discount: { discont_price }$</p>   */}
-          {/* {
-          category_show 
-          ? <p>Category: {category}</p> 
-          : ''
-      }   */
-         }      
+            <p>{ title }</p>               
         
       </Link> 
-      <div
-       className={s.add_btn}
-       onClick={() => dispatch(addToCartAction({ id, title, image, price, discont_price }))}
-       >
-        Add to Cart
+         <div
+           className={s.add_btn}
+           onClick={() => dispatch(addToCartAction({ id, title, image, price, discont_price }))}
+         >
+           Add to Cart
         </div> 
-    </div>
-    
+    </div>    
   )
 }
 
 
-// {discont_price && <p>Discount: {discont_price}$</p>}
-				  
-// {!discont_price && <p>Price: {price}$</p>}
+
 
 

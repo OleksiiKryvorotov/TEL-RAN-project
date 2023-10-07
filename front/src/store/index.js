@@ -12,9 +12,7 @@ const rootReducer = combineReducers({
     productsByCategory: productsByCategoryReducer,
     allProducts: allProductsReducer,
     singleProduct: singleProductReducer,
-    cart: cartReducer
-    // countCart: selectCartItemCount
-       
+    cart: cartReducer       
 });
   
 export const store = createStore(rootReducer, applyMiddleware(thunk));

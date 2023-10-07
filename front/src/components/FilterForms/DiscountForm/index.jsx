@@ -39,26 +39,26 @@ export default function DiscountForm() {
           </form>
 	    
 
-	    <div className={s.discount}>
+	<div className={s.discount}>
           <p className={s.title}>Discounted items</p>
           <input 
           type='checkbox'
           checked={checkboxChecked}
           onChange={handleChange}
           />
-	    </div>
+	</div>
 
       
 
-	    <div className={s.sorted}> 
+	<div className={s.sorted}> 
 	      <p className={s.title}>Sorted</p>
           <select onChange={order}>
-		    <option value='default'>By default</option>
-		    <option value='title'>By alphabet A-Z</option>
-		    <option value='price_asc'>By price ASC</option> 
-            <option value='price_desc'>By price DESC</option>
+		      <option value='default'>By default</option>
+		      <option value='title'>By alphabet A-Z</option>
+		      <option value='price_asc'>By price ASC</option> 
+          <option value='price_desc'>By price DESC</option>
           </select>    
-        </div>     
+   </div>     
 	</div>
   );
 }

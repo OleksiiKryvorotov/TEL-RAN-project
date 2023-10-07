@@ -25,7 +25,6 @@ function App() {
     dispatch(getAllProducts)
   }, [])
 
-
   return (
     <div>
     <NavMenu />

@@ -23,8 +23,6 @@ const phoneNumberRegister = register('phoneNumber', {
   }
 });
 
-// const submit = data => console.log(data);
-
 const submit = new_product_obj => {
   addNewProductSale(new_product_obj);
   reset()
@@ -99,9 +97,7 @@ const random_products = get_random_products();
       <div className={s._sale_container}>
         <h1>Sale</h1>
         <div>
-
-          <ProductsContainer products={random_products} category_show={false}/>         
-
+          <ProductsContainer products={random_products} category_show={false}/> 
         </div>
       </div>
 

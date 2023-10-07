@@ -23,8 +23,11 @@ const itemCount = useSelector(selectCartItemCount);
       </div>
       <div className={s.cart}>
       <Link to='/cart'><img src={bag} alt="vector"/>      
-       </Link>
-       <div className={s.cart_item_count}>{itemCount}</div>
+       </Link>    
+       {/* скрывать\ показывать счетчик товаров в корзине: */}
+       {itemCount > 0 && (
+          <div className={s.cart_item_count}>{itemCount}</div>
+        )}
        </div>
     </div>
   )

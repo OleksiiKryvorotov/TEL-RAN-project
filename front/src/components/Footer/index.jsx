@@ -39,10 +39,7 @@ export default function Footer() {
 	  </div>
 	</div>
 	<div className={s.google}>
-		<GoogleMap />
-      {/* <div className={s.h5}>  <h6>The Best Shop For The Best goods (c)</h6>
-    <h6>2023</h6>
-     </div> */}
+		<GoogleMap />      
   </div>
   </div>
   
