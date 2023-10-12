@@ -27,7 +27,7 @@ export default function ProductCard({ id, title, image, price, discont_price, ca
             (
             <p>{price.toFixed(2)}$</p>
             )}
-            <p>{ countDiscont}%</p>
+            {countDiscont !== null && countDiscont > 0 && <p>{countDiscont}%</p>}
         </div>             
 
             <p>{ title }</p>               

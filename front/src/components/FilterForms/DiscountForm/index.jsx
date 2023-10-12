@@ -12,7 +12,7 @@ export default function DiscountForm() {
 
   const handleChange = () => {
     setCheckboxChecked(!checkboxChecked);
-    // Вызывайте get_discount_products при изменении состояния флажка
+    // Вызов get_discount_products при изменении состояния флажка
     dispatch(getDiscountProductsAction(!checkboxChecked));
   };
 
@@ -46,9 +46,7 @@ export default function DiscountForm() {
           checked={checkboxChecked}
           onChange={handleChange}
           />
-	</div>
-
-      
+	</div>      
 
 	<div className={s.sorted}> 
 	      <p className={s.title}>Sorted</p>

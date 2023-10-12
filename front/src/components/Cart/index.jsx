@@ -37,10 +37,10 @@ export default function Cart() {
   };
 
   return (    
-    <div className={s.cart_cont}>
-    <h1 className={s.title_cart}>Shopping cart</h1>
-    
     <div>
+      <h1 className={s.title_cart}>Shopping cart</h1>
+    
+     <div>
       <div className={s.cart_cont}>       
         {cart_state.length > 0
           ? cart_state.map((el) => <CartItem key={el.id} {...el} />)

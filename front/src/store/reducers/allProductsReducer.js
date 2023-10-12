@@ -15,9 +15,9 @@ export const allProductsReducer = (state=[], action) => {
     if (action.payload === 'title') {
       return [...state].sort((a, b) => a.title.localeCompare(b.title))
     } else if(action.payload === 'price_asc') {
-      state.sort((a, b) =>  b.price - a.price)
+      state.sort((a, b) =>  a.price - b.price)
     } else if(action.payload === 'price_desc') {
-      state.sort((a, b) => a.price - b.price)
+      state.sort((a, b) => b.price - a.price)
     } else if(action.payload === 'default') {
       state.sort((a, b) => a.id - b.id)
     }

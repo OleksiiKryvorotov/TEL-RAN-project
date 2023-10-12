@@ -61,8 +61,6 @@ const random_products = get_random_products();
           </div>        
       </div>
 
-
-
       <div className={s.catalog_container}>
         <div className={s.btn_container}>
           <h1>Catalog</h1>
