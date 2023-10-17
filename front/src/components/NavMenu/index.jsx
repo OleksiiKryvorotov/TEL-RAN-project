@@ -14,13 +14,14 @@ const itemCount = useSelector(selectCartItemCount);
 
   return (
     <div className={s.nav_menu}>  
-     <img className={s.logo}src={logoImage} alt="logo"/>   
+     <Link to='/'><img className={s.logo}src={logoImage} alt="logo"/>  
+     </Link>  
       <Link className={s.catalog} to='/categories'>Catalog</Link>
-      <div className={s.nav_block}>
-      <Link to='/'>Main Page</Link>      
-      <Link to='/products'>All Products</Link>
-      <Link to='/sales'>All sales</Link>
-      </div>
+        <div className={s.nav_block}>
+          <Link to='/'>Main Page</Link>      
+          <Link to='/products'>All Products</Link>
+          <Link to='/sales'>All sales</Link>
+        </div>
       <div className={s.cart}>
       <Link to='/cart'><img src={bag} alt="vector"/>      
        </Link>    

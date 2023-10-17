@@ -27,9 +27,8 @@
   font-size: 20px;  
 }
 
-.product_item > div p:nth-child(3) {
-  color: red;
-  
+.dis_pr {
+  color: red;  
   font-weight: 700;
   margin: 10px 0;
   font-size: 20px;
@@ -40,14 +39,14 @@
   margin: 15px 0;
 }
 
-.product_item > div p:last-child {
+/* .product_item > div p:last-child {
   background-color: green;
   color: white;
   border-radius: 10px;
   padding: 15px;
   width: fit-content;
   margin: 15px 0;
-}
+} */
 
 .add_btn {
   cursor: pointer;
@@ -58,4 +57,5 @@
   padding: 10px;
   width: fit-content;
 }
+
 

@@ -1,7 +1,8 @@
 .nav_menu {      
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;  
+    margin-top: 50px;  
     padding: 40px;          
     width: 1440px;
     height: 72px;

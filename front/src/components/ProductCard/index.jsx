@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCartAction } from '../../store/reducers/cartReducer'
 
-export default function ProductCard({ id, title, image, price, discont_price, category, category_show}) {
+export default function ProductCard({ id, title, image, price, discont_price}) {
 
   const dispatch = useDispatch()
   const countDiscont =  Math.round(discont_price ? ((price - discont_price ) / price * 100) : 0)
